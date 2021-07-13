@@ -52,10 +52,13 @@ class Home extends React.Component {
             case rangeID >= 700 && rangeID <= 781:
                 this.setState({icon: this.weatherIcon.Atmosphere})
                 break;
-            case rangeID == 800:
+            case rangeID === 800:
                 this.setState({icon: this.weatherIcon.Clear})
                 break;
             case rangeID >= 801 && rangeID <= 804:
+                this.setState({icon: this.weatherIcon.Clouds})
+                break;
+            default:
                 this.setState({icon: this.weatherIcon.Clouds})
         }
     }
@@ -73,9 +76,9 @@ class Home extends React.Component {
             celcius: this.calculateCelcius(response.main.temp),
             temp_max: this.calculateCelcius(response.main.temp_max),
             temp_min: this.calculateCelcius(response.main.temp_min),
-            description: response.weather[0].description,
-            icon: this.weatherIcon.Thunderstorm
+            description: response.weather[0].description
         })
+        this.get_WeatherIcon(this.weatherIcon, response.weather[0].id)
     }
 
     render() {
