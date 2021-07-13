@@ -2,7 +2,7 @@ import Weather from '../components/Weather'
 import React from "react";
 import WeatherInput from "../components/WeatherInput";
 
-const API_KEY = process.env.WEATHER_API_KEY
+const API_KEY = "e81887ef6e165833742b414b2565aabe"
 
 class Home extends React.Component {
     constructor() {
