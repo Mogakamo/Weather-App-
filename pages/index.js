@@ -1,5 +1,6 @@
 import Weather from '../components/Weather'
 import React from "react";
+import WeatherInput from "../components/WeatherInput";
 
 const API_KEY = process.env.WEATHER_API_KEY
 
@@ -84,6 +85,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className="main">
+                <WeatherInput />
                 <Weather
                     city={this.state.city}
                     country={this.state.country}
