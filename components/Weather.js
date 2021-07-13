@@ -7,7 +7,7 @@ const Weather = (props) => {
             <div className="container mx-auto align-content-center align-center">
                 <div className="cards">
                    <h1>{props.city},{props.country}</h1>
-                    <h5 className="py-4"><i className="wi wi-day-sunny display-1"></i> </h5>
+                    <h5 className="py-4"><i className={`wi ${props.weatherIcon} display-1`}></i> </h5>
                     <h1 className="py-2">{props.temp_celcius}&deg;</h1>
 
                 {/*    show the max and min temperature */}
