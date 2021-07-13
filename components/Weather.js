@@ -1,10 +1,13 @@
 import React from 'react'
 
+
 const Weather = () => {
     return (
         <>
             <div className="container">
-                <h1>Weather App</h1>
+                <div className="cards">
+                   <h1>London</h1>
+                </div>
             </div>
         </>
     )
